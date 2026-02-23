@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    height: 100vh;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header {
+    font-size: 32px;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    background-color: dodgerblue;
+}
+
+.content {
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.add-book {
+    display: grid;
+    grid-column: 1 / 3;
+    grid-row: 1 / 4;
+    background-color: dodgerblue;
+    margin-top: 10px;
+    min-width: 600px;
+    height: 90vh;
+    gap: 10px;
+}
+
+.book-card {
+    background-color: dodgerblue;
+    margin-top: 10px;
+    width: 360px;
+    height: 300px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title-text {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.vert-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.set-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+button {
+    color: dodgerblue;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: white;
+    border-color: black;
+}
