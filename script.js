@@ -1,39 +1,38 @@
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
-  if (!new.target) {
-    throw Error("You must use the 'new' operator to call the constructor");
-  }
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  this.id = crypto.randomUUID();
-
-  this.info = function() {
-    if (read == true) {
-      return this.title + ' by ' + this.author + ', ' + this.pages + ', have read';
-    }
-    return this.title + ' by ' + this.author + ', ' + this.pages + ', not read yet';
-  }
-
-  this.updateRead = function() {
-    if (this.read == true) {
-        this.read = false;
-    }
-    else {
-        this.read = true;
-    }
-  }
-
-  this.equal = function(book) {
-    if (this.title == book.title && this.author == book.author) {
-        return true;
-    }
-    return false;
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.id = crypto.randomUUID();
     }
 
-    this.cardvalue = function() {
+    info()  {
+        if (read == true) {
+        return this.title + ' by ' + this.author + ', ' + this.pages + ', have read';
+        }
+        return this.title + ' by ' + this.author + ', ' + this.pages + ', not read yet';
+    }
+
+    updateRead() {
+        if (this.read == true) {
+            this.read = false;
+        }
+        else {
+            this.read = true;
+        }
+    }
+
+    equal(book) {
+        if (this.title == book.title && this.author == book.author) {
+            return true;
+        }
+        return false;
+    }
+
+    cardvalue() {
         const newCard = document.createElement("div");
         newCard.className = "book-card";
         newCard.id = this.id;
